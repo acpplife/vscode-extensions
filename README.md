@@ -1,5 +1,7 @@
 # VS Code Extensions
 
+[Simplified Chinese](README.zh-CN.md)
+
 A collection of focused Visual Studio Code extensions. Each extension is maintained as a self-contained package with its own source code, tests, documentation, version, and Marketplace release.
 
 ## Extensions

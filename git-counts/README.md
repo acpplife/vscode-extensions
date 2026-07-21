@@ -1,5 +1,7 @@
 # Git Counts
 
+[Simplified Chinese](https://github.com/acpplife/vscode-extensions/blob/main/git-counts/README.zh-CN.md)
+
 See staged and unstaged Git file counts separately in the VS Code status bar. Click either count to open the corresponding built-in Source Control group.
 
 ## Features
