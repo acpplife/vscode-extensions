@@ -1,0 +1,83 @@
+{
+  "name": "git-counts",
+  "displayName": "Git Counts",
+  "description": "Show staged and unstaged Git file counts separately and jump to either Source Control group.",
+  "version": "0.1.4",
+  "publisher": "ssisl",
+  "author": {
+    "name": "Wang Zhichang"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "icon": "images/icon.png",
+  "homepage": "https://marketplace.visualstudio.com/items?itemName=ssisl.git-counts",
+  "galleryBanner": {
+    "color": "#0D1B2A",
+    "theme": "dark"
+  },
+  "pricing": "Free",
+  "markdown": "github",
+  "qna": "marketplace",
+  "keywords": [
+    "git",
+    "scm",
+    "staged",
+    "unstaged",
+    "staged changes",
+    "unstaged changes",
+    "change count",
+    "status bar",
+    "source control",
+    "multi-root workspace"
+  ],
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "SCM Providers"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "extensionDependencies": [
+    "vscode.git"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": {
+      "supported": false,
+      "description": "Git Counts requires a local Git repository managed by VS Code's built-in Git extension."
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "gitCounts.showStaged",
+        "title": "Show Staged Changes",
+        "category": "Git Counts"
+      },
+      {
+        "command": "gitCounts.showChanges",
+        "title": "Show Changes",
+        "category": "Git Counts"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p .",
+    "check": "tsc --noEmit -p .",
+    "test": "vitest run",
+    "package": "pnpm run check && pnpm test && mkdir -p dist && vsce package --allow-missing-repository --out dist/git-counts-0.1.4.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/vscode": "^1.125.0",
+    "@vscode/vsce": "^3.9.2",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "packageManager": "pnpm@10.15.1"
+}

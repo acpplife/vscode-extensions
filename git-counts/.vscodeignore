@@ -1,0 +1,11 @@
+.gitignore
+.DS_Store
+src/**
+test/**
+node_modules/**
+dist/**
+coverage/**
+tsconfig.json
+vitest.config.ts
+pnpm-lock.yaml
+*.vsix
